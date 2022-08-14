@@ -1,0 +1,109 @@
+
+#header {
+    #navigation {
+        background-color: #fff;
+        padding: 15px 0;
+
+        @media (max-width:$screen-sm-min) {
+            #logo {
+                margin-right: auto;
+            }
+        }
+
+        #burger-menu {
+            display: none;
+
+            @media (max-width: $screen-sm-min) {
+                
+                display: block;
+                cursor: pointer;
+
+                span {
+                    background: $dark-grey;
+                    clear: left;
+                    float: left;
+                    height: 2px;
+                    margin-bottom: 5px;
+                    transition: all .2s;
+                    width: 100%;
+                
+                    &:last-child {
+                      margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        #items {
+
+            ul {
+                @media(max-width: $screen-sm-min) {
+                    display: none;
+                }
+    
+                li {
+        
+                    .nav-item {
+                        color: $dark-grey;
+                        text-decoration: none;
+        
+                        &:hover {
+                            color: $green;
+                        }
+                    }
+        
+                    @media(max-width: $screen-sm-min) {
+    
+                        &.list-item {
+                            text-align: center;
+                            padding: 15px 0;
+                            font-weight: bold;
+                            border-bottom: 1px solid rgb(223, 223, 223);
+    
+                            &:last-child {
+                                border-bottom: none;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #login,
+        #contact,
+        #newsletter {
+
+            @media (max-width: $screen-sm-min) {
+                display: none;
+                margin-top: 20px;
+                text-align: center;
+
+                a {
+                    color: $dark-grey;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        #login {
+            a {
+                color: $orange;
+            }
+
+            @media (max-width: $screen-sm-min) {
+                margin-left: auto;
+            }
+        }
+
+        #newsletter {
+            @media (max-width: $screen-sm-min) {
+                margin-right: auto;
+            }
+        }
+    }
+}

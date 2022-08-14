@@ -1,20 +1,334 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dist/main.css">
     </head>
 
     <body>
         <section id="header">
-            navi
+            <nav id="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div id="logo" class="col-2">
+                            <div class="logo-view">
+                                <img class="img-fluid" src="Assets/images/Globus_logo.jpeg" alt="Globus Logo">
+                            </div>
+                        </div>
+                        <div id="burger-menu" class="col-1 mt-3">
+                            <div id="burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div id="items" class="col-12">
+                            <ul class="list-unstyled">
+                                <li class="list-item">
+                                    <a href="#" class="nav-item">
+                                        Märkte
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="nav-item">
+                                        Bewusst Leben
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="nav-item">
+                                        Sortiment
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="nav-item">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="nav-item">
+                                        Unternehmen
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="nav-item active">
+                                        Mein Globus
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="login" class="col-3">
+                            <a href="#">
+                                <i class="fas fa-user"></i>
+                                Anmelden
+                            </a>
+                        </div>
+                        <div id="contact" class="col-3">
+                            <a href="#">Kontakt</a>
+                        </div>
+                        <div id="newsletter" class="col-3">
+                            <a href="#">Newsletter</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </section>
 
         <section id="content">
-            content
+            <div id="offer-view">
+                <div class="container">
+                    <div class="row">
+                        <div id="image" class="col-12">
+                            SLIDER
+                        </div>
+
+                        <div id="detail" class="col-12">
+                            <h1 class="title-view">
+                                Cherry Tomaten
+                            </h1>
+                            <h3 class="subheader-view">
+                                Globus
+                            </h3>
+
+                            <p class="price">
+                                2,10 EUR
+                            </p>
+                            <p class="tax">
+                                inkl. MwSt. zzgl Versandkosten</br>
+                                500g (1kg = 4,20 EUR)
+                            </p>
+                        </div>
+
+                        <div id="weight" class="col-12">
+                            <p class="title-view">
+                                Soll es eine andere Größe sein?
+                            </p>
+
+                            <div class="weight-tab" data-weight="500">
+                                <p>
+                                    500 g
+                                </p>
+                            </div>
+                            <div class="weight-tab" data-weight="300">
+                                <p>
+                                    300 g
+                                </p>
+                            </div>
+                            <div class="weight-tab" data-weight="250">
+                                <p>
+                                    250 g
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="footer">
-            footer
+            <div class="container">
+                <div id="footer-row-one" class="row">
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Märkte
+                        </a>
+                    </div>
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Bewusst Leben
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Bewusst Genießen
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Bewusst Pflegen
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Bewusst Wohlfühlen
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Bewusst Handeln
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Rezepte
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Sortiment
+                        </a>
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Unsere Marken
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Exklusivmarken
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Marken unsere Partner
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="footer-row-two" class="row">
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Services
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Newsletter
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Service vor Ort
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Garantien
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Buchshop
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Unternehmen
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Profil
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Historie
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Werte
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Arbeiten bei Globus
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Presse
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Standortanforderungen
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Neue
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Ansiedlungsprojekte
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Mein Globus
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Weinliebhaber Club
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Weltentdecker Club
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Tankeschön
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="footer-row-three">
+                    <div class="col-4 footer-item">
+                        <a href="#" class="footer-title">
+                            Globus Gruppe
+                        </a>
+
+                        <ul class="list-unstyled">
+                            <li class="footer-link">
+                                <a href="#">
+                                    Globus Baumarkt
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Alphatecc
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Globus Russland
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Globus Tschechien
+                                </a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="#">
+                                    Mein fridel
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </body>
+    <script src="dist/main.js"></script>
 </html>
