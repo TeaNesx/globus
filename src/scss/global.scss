@@ -48,3 +48,11 @@ body {
     // font-family: "Merrieweather";
     background-color: $dark-grey;
 }
+
+#content {
+    @media(max-width: $screen-sm-min) {
+        > div {
+            margin-top: 20px;
+        }
+    }
+}
