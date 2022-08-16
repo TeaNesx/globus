@@ -1,0 +1,26 @@
+#text-icon {
+    p, h2 {
+        color: white;
+    }
+
+    .text-view {
+        text-align: center;
+    }
+
+    .icon {
+        margin-top: 20px;
+
+        i {
+            color: $orange;
+            font-size: 70px;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}

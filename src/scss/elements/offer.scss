@@ -52,11 +52,85 @@
         }
 
         #need-more {
-            display: flex;
-            
-            a {
-                text-decoration: none;
-                cursor: pointer;
+            #need-more-btn {
+                width: 130px;
+                display: flex;
+                background-color: #f3f3f3;
+                border: solid 1px $dark-grey;
+                border-radius: 5px;
+                margin: 0 auto;
+
+                p.counter {
+                    margin: 0 auto;
+                    color: $dark-grey;
+                    align-self: center;
+                }
+
+                
+                .btn-more {
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding: 5px 15px;
+                    background-color: $dark-grey;
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+
+            @media (max-width: $screen-sm-min) {
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+
+        #action-btn {
+            #add-to-cart,
+            #compare {
+                p {
+                    margin-bottom: 0;
+                    margin-right: 15px;
+                }
+
+                @media (max-width: $screen-sm-min) {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .btn-action {
+                padding: 15px;
+                border-radius: 10px;
+                color: white;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+
+            #add-to-cart {
+                .btn-action {
+                    background-color: $green;
+                }
+
+                @media (max-width: $screen-sm-min) {
+                    margin-right: 10px;
+                }
+            }
+
+            #compare {
+                .btn-action {
+                    background-color: $orange;
+                }
+
+                @media (max-width: $screen-sm-min) {
+                    margin-left: 10px;
+                }
+            }
+
+            @media (max-width: $screen-sm-min) {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
             }
         }
     }

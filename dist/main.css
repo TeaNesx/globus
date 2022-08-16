@@ -11317,10 +11317,94 @@ body {
     justify-content: center;
   }
 }
-#offer-view .container #need-more {
+#offer-view .container #need-more #need-more-btn {
+  width: 130px;
   display: flex;
+  background-color: #f3f3f3;
+  border: solid 1px #555555;
+  border-radius: 5px;
+  margin: 0 auto;
 }
-#offer-view .container #need-more a {
+#offer-view .container #need-more #need-more-btn p.counter {
+  margin: 0 auto;
+  color: #555555;
+  align-self: center;
+}
+#offer-view .container #need-more #need-more-btn .btn-more {
   text-decoration: none;
   cursor: pointer;
+  padding: 5px 15px;
+  background-color: #555555;
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 576px) {
+  #offer-view .container #need-more {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+#offer-view .container #action-btn #add-to-cart p,
+#offer-view .container #action-btn #compare p {
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+@media (max-width: 576px) {
+  #offer-view .container #action-btn #add-to-cart,
+#offer-view .container #action-btn #compare {
+    display: flex;
+    align-items: center;
+  }
+}
+#offer-view .container #action-btn .btn-action {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+#offer-view .container #action-btn .btn-action i {
+  font-size: 20px;
+}
+#offer-view .container #action-btn #add-to-cart .btn-action {
+  background-color: #009933;
+}
+@media (max-width: 576px) {
+  #offer-view .container #action-btn #add-to-cart {
+    margin-right: 10px;
+  }
+}
+#offer-view .container #action-btn #compare .btn-action {
+  background-color: #f98a00;
+}
+@media (max-width: 576px) {
+  #offer-view .container #action-btn #compare {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 576px) {
+  #offer-view .container #action-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+#text-icon p, #text-icon h2, #text-icon .h2 {
+  color: white;
+}
+#text-icon .text-view {
+  text-align: center;
+}
+#text-icon .icon {
+  margin-top: 20px;
+}
+#text-icon .icon i {
+  color: #f98a00;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+}
+#text-icon .icon p {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
 }
