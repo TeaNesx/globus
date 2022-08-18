@@ -46,13 +46,34 @@ $screen-xl-min: 1200px;
     
 body {
     // font-family: "Merrieweather";
-    background-color: $dark-grey;
+    // background-color: $dark-grey;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../Assets/images/black-background.jpg");
 }
 
 #content {
     @media(max-width: $screen-sm-min) {
         > div {
-            margin-top: 20px;
+            margin-top: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
+    }
+}
+
+.btn-primary {
+    background: $orange;
+    border: $orange;
+    padding: 10px 15px;
+
+    &:hover {
+        background: #ffb75e;
+    }
+}
+
+.title {
+    @media(max-width: $screen-sm-min) {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
     }
 }

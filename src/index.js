@@ -7,4 +7,5 @@ $('#burger-menu').on('click', function(){
     $('#navigation .list-unstyled, #login, #contact, #newsletter').slideToggle(300).toggleClass('active');
 });
 
-responsiveSlick();
+responsiveSlick('#offer-view #image');
+responsiveSlick('#slider-element #slider');

@@ -106,4 +106,25 @@
             }
         }
     }
+
+    #meta-navigation {
+        margin-top: 10px;
+        
+        #meta-navigation-items {
+            ul {
+                display: flex;
+
+                .meta-item {
+                    a {
+                        color: $light-grey;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $orange
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

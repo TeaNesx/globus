@@ -1,5 +1,5 @@
-export function responsiveSlick() {
-    $('#offer-view #image').slick({
+export function responsiveSlick(selector) {
+    $(selector).slick({
         dots: true,
         infinite: false,
         speed: 300,
