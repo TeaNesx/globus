@@ -1,6 +1,12 @@
 #banner {
-    background-color: #5f3b2f;
+    background: url("../Assets/images/wooden-textured-background.jpg");
     color: white;
+    margin-top: 0 !important;
+
+    @media(max-width: $screen-sm-min) {
+        background-size: cover;
+        padding: 60px 0;
+    }
 
     #banner-title {
         text-align: center;

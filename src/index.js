@@ -4,7 +4,7 @@ import {responsiveSlick} from "./js/slick";
 
 
 $('#burger-menu').on('click', function(){
-    $('#navigation .list-unstyled, #login, #contact, #newsletter').slideToggle(300).toggleClass('active');
+    $('#navigation .list-unstyled, #login, #contact, #newsletter, #yt-nav, #fb-nav, #insta-nav').slideToggle(300).toggleClass('active');
 });
 
 responsiveSlick('#offer-view #image');

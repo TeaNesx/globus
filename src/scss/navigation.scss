@@ -107,12 +107,33 @@
         }
     }
 
+    #social-navigation {
+        .social-item {
+            text-align: center;
+
+            @media (max-width: $screen-sm-min) {
+                display: none;
+                margin: 0 auto;
+                margin-top: 15px;
+            }
+            
+            a {
+                color: $dark-grey;
+                font-size: 25px;
+            }
+        }
+    }
+
     #meta-navigation {
         margin-top: 10px;
         
         #meta-navigation-items {
             ul {
                 display: flex;
+
+                @media(max-width: $screen-sm-min) {
+                    margin-bottom: 0;
+                }
 
                 .meta-item {
                     a {

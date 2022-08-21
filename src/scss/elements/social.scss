@@ -1,6 +1,11 @@
 #socials-element {
     background: radial-gradient(circle, rgba(249,163,0,1) 0%, rgba(255,117,0,1) 100%);
     color: white;
+    margin-top: 0 !important;
+
+    @media(max-width: $screen-sm-min) {
+        padding: 60px 0;
+    }
 
     #social-title {
         text-align: center;

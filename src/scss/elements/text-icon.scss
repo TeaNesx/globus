@@ -3,6 +3,12 @@
         color: white;
     }
 
+    p {
+        @media(max-width: $screen-sm-min) {
+            margin-top: 20px;
+        }
+    }
+
     .text-view {
         text-align: center;
     }
