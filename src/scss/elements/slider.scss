@@ -2,18 +2,35 @@
     background-color: white;
     padding: 20px 0;
 
-    .slide-item {
-        // -webkit-box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3); 
-        // box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3);
-        
-        .title {
-            text-align: left;
-            margin-bottom: 0;
-            margin-top: 20px;
-        }
+ 
 
-        .subtitle {
-            color: $light-grey;
+    #slider-element-title {
+        .title {
+            @media (min-width: $screen-lg-min) {
+                text-align: center;
+            }
         }
     }
+
+    #slider {
+        @media (min-width: $screen-lg-min) {
+            margin-top: 50px;
+        }
+        
+        .slide-item {
+            // -webkit-box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3); 
+            // box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3);
+            
+            .title {
+                text-align: left;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+    
+            .subtitle {
+                color: $light-grey;
+            }
+        }
+    }
+
 }

@@ -1,31 +1,32 @@
-export function responsiveSlick(selector) {
+export function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow) {
     $(selector).slick({
         dots: true,
         infinite: false,
         speed: 300,
-        slidesToShow: 1,
+        slidesToShow: xl_slidetoshow,
         slidesToScroll: 1,
         responsive: [
             {
-            breakpoint: 1024,
+            breakpoint: 992,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: lg_slidetoshow,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true
+                dots: true,
+                arrow: false
             }
             },
             {
-            breakpoint: 600,
+            breakpoint: 768,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: md_slidetoshow,
                 slidesToScroll: 1
             }
             },
             {
             breakpoint: 576,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: sm_slidetoshow,
                 slidesToScroll: 1,
             }
             }

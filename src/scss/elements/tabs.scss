@@ -14,53 +14,75 @@
         }
     }
 
-    #tab-detail {
+    #tab-element-detailed {
         background-color: #f3f3f3;
-        color: $dark-grey;
-        padding-bottom: 20px;
 
-        #tab-detail-title {
-            p {
-                font-size: 24px;
-                margin-top: 20px;
-                font-weight: bold;
-
-                @media (max-width: $screen-sm-min) {
-                    text-align: center;
-                }
-            }
-
-        }
-        #chart {
+        #tab-detail {
+            color: $dark-grey;
             padding-bottom: 20px;
-            
-            ul {
-                .list-item {
-                    border-bottom: solid 1px $dark-grey;
-                    margin-top: 1rem;
+    
+            #tab-detail-title {
+                p {
+                    font-size: 24px;
+                    margin-top: 20px;
+                    font-weight: bold;
+    
+                    @media (max-width: $screen-sm-min) {
+                        text-align: center;
+                    }
+                }
+    
+            }
+            #chart {
+                padding-bottom: 20px;
+                
+                ul {
+                    @media (min-width: $screen-lg-min) {
+                        padding-right: 3em;
+                    }
 
-                    .value {
-                        font-weight: bold;
-                        
+                    .list-item {
+                        border-bottom: solid 1px $dark-grey;
+                        margin-top: 1rem;
+    
+                        .value {
+                            font-weight: bold;
+                            float: right;
+    
+                            @media (max-width: $screen-sm-min) {
+                                margin-left: auto;
+                            }
+                        }
+    
                         @media (max-width: $screen-sm-min) {
-                            margin-left: auto;
+                            display: flex;
                         }
                     }
-
-                    @media (max-width: $screen-sm-min) {
-                        display: flex;
-                    }
                 }
             }
-        }
+    
+            #read-more {
 
-        #read-more {
-            .text-view {
-                @media (max-width: $screen-sm-min) {
-                    text-align: center;
+                @media (min-width: $screen-lg-min) {
+                    display: flex;
+                    align-items: center;
+                }
 
-                    p {
-                        font-size: 25px;
+                .text-view {
+
+                    @media (min-width: $screen-lg-min) {
+                        padding-left: 7em;
+
+                        p {
+                            font-size: 40px;
+                        }
+                    }
+                    @media (max-width: $screen-sm-min) {
+                        text-align: center;
+    
+                        p {
+                            font-size: 25px;
+                        }
                     }
                 }
             }

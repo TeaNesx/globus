@@ -51,6 +51,12 @@ body {
 }
 
 #content {
+    @media(min-width: $screen-lg-min) {
+        > div {
+            margin-top: 100px;
+        }
+    }
+
     @media(max-width: $screen-sm-min) {
         > div {
             margin-top: 50px;
