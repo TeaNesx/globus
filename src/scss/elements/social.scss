@@ -3,6 +3,10 @@
     color: white;
     margin-top: 0 !important;
 
+    @media(min-width: $screen-lg-min) {
+        padding: 100px 0;
+    }
+
     @media(max-width: $screen-sm-min) {
         padding: 60px 0;
     }

@@ -11118,7 +11118,8 @@ textarea.form-control-lg {
   src: url(43706a2883eb57c79284.ttf) format("ttf");
 }
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(1217df9845ac8cbcdae2.jpg);
+  background-size: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(09634850988b3c8e3272.jpg);
 }
 
 @media (min-width: 992px) {
@@ -11154,20 +11155,29 @@ body {
   background-color: #fff;
   padding: 15px 0;
 }
+@media (min-width: 992px) {
+  #header #navigation .container {
+    position: relative;
+  }
+  #header #navigation .container #logo {
+    position: absolute;
+    top: -30%;
+  }
+}
 @media (max-width: 576px) {
-  #header #navigation #logo {
+  #header #navigation .container #logo {
     margin-right: auto;
   }
 }
-#header #navigation #burger-menu {
+#header #navigation .container #burger-menu {
   display: none;
 }
 @media (max-width: 576px) {
-  #header #navigation #burger-menu {
+  #header #navigation .container #burger-menu {
     display: block;
     cursor: pointer;
   }
-  #header #navigation #burger-menu span {
+  #header #navigation .container #burger-menu span {
     background: #555555;
     clear: left;
     float: left;
@@ -11176,106 +11186,109 @@ body {
     transition: all 0.2s;
     width: 100%;
   }
-  #header #navigation #burger-menu span:last-child {
+  #header #navigation .container #burger-menu span:last-child {
     margin-bottom: 0;
   }
 }
 @media (min-width: 992px) {
-  #header #navigation #items {
+  #header #navigation .container #items {
     display: flex;
   }
 }
 @media (min-width: 992px) {
-  #header #navigation #items ul {
+  #header #navigation .container #items ul {
     display: flex;
     align-items: center;
   }
 }
 @media (max-width: 576px) {
-  #header #navigation #items ul {
+  #header #navigation .container #items ul {
     display: none;
   }
 }
-#header #navigation #items ul li {
+#header #navigation .container #items ul li {
   margin: 0 10px;
 }
-#header #navigation #items ul li .nav-item {
+#header #navigation .container #items ul li:first-child {
+  margin-left: 0;
+}
+#header #navigation .container #items ul li .nav-item {
   color: #555555;
   text-decoration: none;
 }
-#header #navigation #items ul li .nav-item:hover {
+#header #navigation .container #items ul li .nav-item:hover {
   color: #009933;
 }
 @media (max-width: 576px) {
-  #header #navigation #items ul li.list-item {
+  #header #navigation .container #items ul li.list-item {
     text-align: center;
     padding: 15px 0;
     font-weight: bold;
     border-bottom: 1px solid rgb(223, 223, 223);
   }
-  #header #navigation #items ul li.list-item:last-child {
+  #header #navigation .container #items ul li.list-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }
 }
 @media (min-width: 992px) {
-  #header #navigation #extended-nav {
+  #header #navigation .container #extended-nav {
     display: flex;
     align-items: center;
   }
 }
 @media (min-width: 992px) {
-  #header #navigation #extended-nav #login,
-#header #navigation #extended-nav #contact,
-#header #navigation #extended-nav #newsletter {
+  #header #navigation .container #extended-nav #login,
+#header #navigation .container #extended-nav #contact,
+#header #navigation .container #extended-nav #newsletter {
     padding: 0;
     text-align: center;
   }
 }
 @media (max-width: 576px) {
-  #header #navigation #extended-nav #login,
-#header #navigation #extended-nav #contact,
-#header #navigation #extended-nav #newsletter {
+  #header #navigation .container #extended-nav #login,
+#header #navigation .container #extended-nav #contact,
+#header #navigation .container #extended-nav #newsletter {
     display: none;
     margin-top: 20px;
     text-align: center;
   }
 }
-#header #navigation #extended-nav #login a,
-#header #navigation #extended-nav #contact a,
-#header #navigation #extended-nav #newsletter a {
+#header #navigation .container #extended-nav #login a,
+#header #navigation .container #extended-nav #contact a,
+#header #navigation .container #extended-nav #newsletter a {
   color: #555555;
   text-decoration: none;
 }
-#header #navigation #extended-nav #login a:hover,
-#header #navigation #extended-nav #contact a:hover,
-#header #navigation #extended-nav #newsletter a:hover {
+#header #navigation .container #extended-nav #login a:hover,
+#header #navigation .container #extended-nav #contact a:hover,
+#header #navigation .container #extended-nav #newsletter a:hover {
   color: #009933;
 }
-#header #navigation #extended-nav #login a {
+#header #navigation .container #extended-nav #login a {
   color: #f98a00;
 }
 @media (max-width: 576px) {
-  #header #navigation #extended-nav #login {
+  #header #navigation .container #extended-nav #login {
     margin-left: auto;
   }
 }
 @media (max-width: 576px) {
-  #header #navigation #extended-nav #newsletter {
+  #header #navigation .container #extended-nav #newsletter {
     margin-right: auto;
   }
 }
-#header #navigation #social-navigation .social-item {
+#header #navigation .container #social-navigation .social-item {
   text-align: right;
 }
 @media (max-width: 576px) {
-  #header #navigation #social-navigation .social-item {
+  #header #navigation .container #social-navigation .social-item {
     display: none;
     margin: 0 auto;
     margin-top: 15px;
   }
 }
-#header #navigation #social-navigation .social-item a {
+#header #navigation .container #social-navigation .social-item a {
   color: #555555;
   font-size: 25px;
 }
@@ -11298,8 +11311,10 @@ body {
   color: #f98a00;
 }
 
-#footer {
-  background-color: #555555;
+@media (min-width: 992px) {
+  #footer {
+    padding: 100px 0;
+  }
 }
 @media (max-width: 576px) {
   #footer #footer-row-two {
@@ -11652,6 +11667,7 @@ body {
 #slider-element {
   background-color: white;
   padding: 20px 0;
+  margin-top: 0 !important;
 }
 @media (min-width: 992px) {
   #slider-element #slider-element-title .title {
@@ -11677,6 +11693,12 @@ body {
   color: white;
   margin-top: 0 !important;
 }
+@media (min-width: 992px) {
+  #banner {
+    background-size: cover;
+    padding: 100px 0;
+  }
+}
 @media (max-width: 576px) {
   #banner {
     background-size: cover;
@@ -11687,11 +11709,21 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+@media (min-width: 992px) {
+  #banner #banner-title a {
+    margin-top: 20px;
+  }
+}
 
 #socials-element {
   background: radial-gradient(circle, rgb(249, 163, 0) 0%, rgb(255, 117, 0) 100%);
   color: white;
   margin-top: 0 !important;
+}
+@media (min-width: 992px) {
+  #socials-element {
+    padding: 100px 0;
+  }
 }
 @media (max-width: 576px) {
   #socials-element {

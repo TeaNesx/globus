@@ -3,6 +3,11 @@
     color: white;
     margin-top: 0 !important;
 
+    @media(min-width: $screen-lg-min) {
+        background-size: cover;
+        padding: 100px 0;
+    }
+
     @media(max-width: $screen-sm-min) {
         background-size: cover;
         padding: 60px 0;
@@ -11,5 +16,11 @@
     #banner-title {
         text-align: center;
         margin-top: 20px;
+
+        a {
+            @media (min-width: $screen-lg-min) {
+                margin-top: 20px;
+            }
+        }
     }
 }

@@ -1,8 +1,7 @@
 #slider-element {
     background-color: white;
     padding: 20px 0;
-
- 
+    margin-top: 0 !important;
 
     #slider-element-title {
         .title {
@@ -16,7 +15,7 @@
         @media (min-width: $screen-lg-min) {
             margin-top: 50px;
         }
-        
+
         .slide-item {
             // -webkit-box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3); 
             // box-shadow: 0px 3px 9px 3px rgba(0,0,0,0.3);

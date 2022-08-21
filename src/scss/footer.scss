@@ -1,5 +1,8 @@
 #footer {
-    background-color: $dark-grey;
+        
+    @media (min-width: $screen-lg-min) {
+        padding: 100px 0;
+    }
 
     #footer-row-two {
         @media(max-width: $screen-sm-min) {
