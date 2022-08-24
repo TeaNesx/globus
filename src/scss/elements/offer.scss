@@ -26,8 +26,14 @@
         
         #offer-element {
             background-color: white;
-            border-radius: 10px;
-            padding: 15px;
+            border-radius: 25px;
+            padding: 50px;
+
+            #image {
+                @media (max-width:$screen-md-min) {
+                    margin-bottom: 60px;
+                }
+            }
 
             #detail {
     
@@ -60,12 +66,42 @@
             #weight {
 
                 @media(min-width: $screen-lg-min) {
-                    align-self: flex-end;
-                    margin-bottom: 50px;
+                    // align-self: flex-end;
+                    // margin-bottom: 50px;
                 }
 
                 @media(max-width: $screen-sm-min) {
                     margin-top: 40px;
+                }
+
+                #status {
+                    display: flex;
+                    justify-content: right;
+                    margin-top: 10px;
+                    margin-bottom: 6em;
+
+                    @media (max-width: $screen-md-min) {
+                        margin-bottom: 35px;
+                    }
+
+                    .current-status {
+                        margin-left: 10px;
+                        padding: 3px 20px;
+                        border-radius: 5px;
+                        color: white;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                        
+                        &.offer {
+                            background: $red;
+                        }
+
+                        &.new {
+                            background: $green;
+                        }
+                    }
                 }
 
                 .title-view {
@@ -76,7 +112,7 @@
                         text-align: right;
                     }
 
-                    @media(max-width: $screen-sm-min) {
+                    @media(max-width: $screen-md-min) {
                         text-align: center;
                     }
                 }
@@ -88,8 +124,9 @@
                         justify-content: right;
                     }
 
-                    @media(max-width: $screen-sm-min) {
+                    @media(max-width: $screen-md-min) {
                         justify-content: center;
+                        margin-bottom: 35px;
                     }
 
                     .weight-tab {
@@ -97,14 +134,11 @@
                         border-radius: 5px;
                         padding: 10px 25px;
                         cursor: pointer;
-                        margin: 0 10px;
+                        margin-left: 10px;
 
         
                         p {
                             margin-bottom: 0;
-                        }
-        
-                        @media(max-width: $screen-sm-min) {
                         }
                     }
     
@@ -124,7 +158,12 @@
                     border: solid 1px $dark-grey;
                     border-radius: 5px;
                     margin-left: auto;
-    
+
+                    @media (max-width: $screen-md-min) {
+                        margin: 0 auto;
+                        margin-bottom: 35px;
+                    }
+
                     p.counter {
                         margin: 0 auto;
                         color: $dark-grey;
@@ -140,15 +179,18 @@
                         color: white;
                         font-size: 20px;
                     }
+                    
                 }
     
-                @media (max-width: $screen-sm-min) {
-                    margin: 0 auto;
-                    margin-top: 40px;
-                }
             }
     
             #action-btn {
+
+                @media (max-width: $screen-md-min) {
+                    display: flex;
+                    justify-content: center;
+                }
+
                 #add-to-cart,
                 #compare {
                     p {
@@ -161,9 +203,10 @@
                         justify-content: right;
                     }
 
-                    @media (max-width: $screen-sm-min) {
+                    @media (max-width: $screen-md-min) {
                         display: flex;
                         align-items: center;
+                        margin-left: auto;
                     }
                 }
     
@@ -200,14 +243,7 @@
                         margin-left: 10px;
                     }
                 }
-    
-                @media (max-width: $screen-sm-min) {
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 40px;
-                }
             }
         }
-
     }
 }

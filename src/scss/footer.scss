@@ -4,6 +4,10 @@
         padding: 100px 0;
     }
 
+    @media (max-width: $screen-md-min) {
+        padding: 35px 0;
+    }
+
     #footer-row-two {
         @media(max-width: $screen-sm-min) {
             margin: 15px 0;
@@ -23,7 +27,4 @@
     }
 
 
-    @media (max-width: $screen-sm-min) {
-        padding: 15px 0;
-    }
 }

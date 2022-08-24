@@ -1,7 +1,8 @@
-export function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow) {
+export function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow, dots, arrows) {
     $(selector).slick({
-        dots: true,
+        dots: dots,
         infinite: false,
+        arrows : arrows,
         speed: 300,
         slidesToShow: xl_slidetoshow,
         slidesToScroll: 1,
