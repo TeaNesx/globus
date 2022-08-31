@@ -2,15 +2,16 @@
 #header {
     #navigation {
         background-color: #fff;
-        padding: 29px 0;
+        padding: 20px 0 21px 0;
 
-        @media (max-width: $screen-md-min) {
+        @include media-breakpoint-down(lg) {
             padding: 15px 0;
         }
         .container {
 
-            @media (min-width: $screen-lg-min) {
+            @include media-breakpoint-up(lg) {
                 position: relative;
+                padding-right: 0;
 
                 #logo {
                     position: absolute;
@@ -19,7 +20,7 @@
                 }
             }
 
-            @media (max-width:$screen-md-min) {
+            @include media-breakpoint-down(lg) {
                 #logo {
                     margin-right: auto;
                     padding-right: 0;
@@ -30,7 +31,7 @@
                 display: none;
                 margin-top: 1.2em;
 
-                @media (max-width: $screen-md-min) {
+                @include media-breakpoint-down(lg) {
                     
                     display: block;
                     cursor: pointer;
@@ -50,7 +51,7 @@
                     }
                 }
 
-                @media (max-width: $screen-sm-min) {
+                @include media-breakpoint-down(sm) {
                     padding-left: 0;
                 }
     
@@ -58,23 +59,30 @@
     
             #items {
     
-                @media (min-width: $screen-lg-min) {
+                @include media-breakpoint-up(lg) {
                     display: flex;
+                    align-items: flex-end;
+                    margin-left: 196px;
+                    font-size: 18px;
+                    padding-right: 0;
+                    padding-bottom: 5px;
                 }
     
                 ul {
-                    @media (min-width: $screen-lg-min) {
+                    @include media-breakpoint-up(md) {
                         display: flex;
                         align-items: center;
+                        width: 100%;
+                        margin-bottom: 0;
                     }
     
-                    @media(max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         display: none;
                     }
     
         
                     li {
-                        margin: 0 10px;
+                        margin: 0 19px;
 
                         &:first-child {
                             margin-left: 0;
@@ -83,13 +91,20 @@
                         .nav-item {
                             color: $dark-grey;
                             text-decoration: none;
+                            font-weight: bold;
             
                             &:hover {
                                 color: $green;
                             }
                         }
+
+                        &.active {
+                            a {
+                                color: $green;
+                            }
+                        }
     
-                        @media(max-width: $screen-md-min) {
+                        @include media-breakpoint-down(lg) {
         
                             &.list-item {
                                 text-align: center;
@@ -108,30 +123,29 @@
             }
     
             #extended-nav {
-                @media (min-width: $screen-lg-min){
-                    display: flex;
-                    align-items: center;
+                @include media-breakpoint-up(lg) {
+                    padding-right: 0;
                 }
-                
+
                 #login,
                 #contact,
                 #newsletter {
         
-                    @media (min-width: $screen-lg-min) {
+                    @include media-breakpoint-up(md) {
                         padding: 0;
                         text-align: center;
                     }
         
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         display: none;
                         margin-top: 20px;
                         text-align: center;
-        
                     }
         
                     a {
                         color: $dark-grey;
                         text-decoration: none;
+                        font-size: 13px;
         
                         &:hover {
                             color: $green;
@@ -140,17 +154,35 @@
                 }
         
                 #login {
+                    @include media-breakpoint-down(lg) {
+                        margin-left: auto;
+                        margin-right: 5px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        margin-left: auto;
+                        margin-right: 5px;
+                    }
                     a {
                         color: $orange;
+
+                        i {
+                            font-size: 20px;
+                            margin-right: 5px;
+                        }
                     }
         
-                    @media (max-width: $screen-md-min) {
-                        margin-left: auto;
+                }
+
+                #contact {
+                    @include media-breakpoint-up(lg) {
+                        // margin-left: auto;
+                        margin-right: 20px;
                     }
                 }
         
                 #newsletter {
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         margin-right: auto;
                     }
                 }
@@ -159,15 +191,16 @@
             #social-navigation {
                 display: flex;
 
-                @media (min-width: $screen-lg-min) {
+                @include media-breakpoint-up(md) {
                     justify-content: right;
+                    margin-top: 15px;
                 }
 
                 .social-item {
-                    margin-left: 25px;
+                    margin-left: 13px;
 
         
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         display: none;
                         margin: 0 auto;
                         margin-top: 15px;
@@ -185,24 +218,36 @@
 
 
     #meta-navigation {
-        margin-top: 10px;
+        margin-top: 7px;
         
         #meta-navigation-items {
+
+            @include media-breakpoint-up(lg) {
+                margin-left: 196px;
+            }
+
             ul {
                 display: flex;
 
-                @media(max-width: $screen-md-min) {
+                @include media-breakpoint-down(lg) {
                     margin-bottom: 0;
                     display: none;
                 }
 
                 .meta-item {
+                    margin-right: 10px;
+
                     a {
                         color: $light-grey;
                         text-decoration: none;
+                        font-size: 14px;
 
                         &:hover {
                             color: $orange
+                        }
+
+                        i {
+                            margin-left: 7px;
                         }
                     }
                 }

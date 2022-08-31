@@ -1,4 +1,6 @@
-export function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow, dots, arrows) {
+import slick from "slick-carousel";
+
+function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow, dots, arrows) {
     $(selector).slick({
         dots: dots,
         infinite: false,
@@ -31,9 +33,10 @@ export function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_sli
                 slidesToScroll: 1,
             }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     })
 }
+
+
+responsiveSlick('#offer-view #image', 1, 1, 1, 1, true, false);
+responsiveSlick('#slider-element #slider', 5, 5, 3, 1, false);

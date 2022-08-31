@@ -3,12 +3,13 @@
     color: white;
     margin-top: 0 !important;
 
-    @media(min-width: $screen-lg-min) {
+    @include media-breakpoint-up(lg) {
         background-size: cover;
-        padding: 100px 0;
+        padding: 180px 0;
+        padding-bottom: 115px;
     }
 
-    @media(max-width: $screen-md-min) {
+    @include media-breakpoint-down(lg) {
         background-size: cover;
         padding: 60px 0;
     }
@@ -17,9 +18,19 @@
         text-align: center;
         margin-top: 20px;
 
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+
+            h2 {
+                font-size: 43px;
+                font-weight: bold;
+            }
+        }
+
         a {
-            @media (min-width: $screen-lg-min) {
-                margin-top: 20px;
+            @include media-breakpoint-up(lg) {
+                margin-top: 44px;
+                padding: 11px 32px;
             }
         }
     }

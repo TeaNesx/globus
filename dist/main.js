@@ -47,7 +47,47 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/slick */ \"./src/js/slick.js\");\n/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n\r\n\r\n\r\n\r\n\r\n$('#burger-menu').on('click', function(){\r\n    $('#navigation .list-unstyled, #login, #contact, #newsletter, #yt-nav, #fb-nav, #insta-nav').slideToggle(300).toggleClass('active');\r\n});\r\n\r\n(0,_js_slick__WEBPACK_IMPORTED_MODULE_2__.responsiveSlick)('#offer-view #image', 1, 1, 1, 1, true, false);\r\n(0,_js_slick__WEBPACK_IMPORTED_MODULE_2__.responsiveSlick)('#slider-element #slider', 5, 5, 3, 1, false);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _js_burger_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/burger_menu */ \"./src/js/burger_menu.js\");\n/* harmony import */ var _js_burger_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_burger_menu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/slick */ \"./src/js/slick.js\");\n/* harmony import */ var _js_counter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/counter */ \"./src/js/counter.js\");\n/* harmony import */ var _js_counter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_counter__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _js_offer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/offer */ \"./src/js/offer.js\");\n/* harmony import */ var _js_offer__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_js_offer__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _js_tab_element__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/tab_element */ \"./src/js/tab_element.js\");\n/* harmony import */ var _js_tab_element__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_tab_element__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _js_megamenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/megamenu */ \"./src/js/megamenu.js\");\n/* harmony import */ var _js_megamenu__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_megamenu__WEBPACK_IMPORTED_MODULE_6__);\n// import main scss\r\n\r\n\r\n// import js files\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconsole.log('ds');\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/burger_menu.js":
+/*!*******************************!*\
+  !*** ./src/js/burger_menu.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n// Logic for Burgermenu\r\n\r\n$('#burger-menu').on('click', function(){\r\n    $('#navigation .list-unstyled, #login, #contact, #newsletter, #yt-nav, #fb-nav, #insta-nav').slideToggle(300).toggleClass('active');\r\n});\n\n//# sourceURL=webpack:///./src/js/burger_menu.js?");
+
+/***/ }),
+
+/***/ "./src/js/counter.js":
+/*!***************************!*\
+  !*** ./src/js/counter.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n// Logic for counter\r\n\r\nlet $counter = $('#need-more-btn .counter').data('counter');\r\n\r\n$('#need-more-btn .subtract').on('click', function(e) {\r\n    e.preventDefault();\r\n    let $_counter = $('#need-more-btn .counter').attr('data-counter');\r\n\r\n    if($_counter > 0 ) {\r\n        $_counter--;\r\n        changeCounter($(this), $_counter);\r\n        updatePrice(false);\r\n    }\r\n})\r\n\r\n$('#need-more-btn .add').on('click', function(e) {\r\n    e.preventDefault();\r\n    let $_counter = $('#need-more-btn .counter').attr('data-counter');\r\n\r\n    $_counter++;\r\n    changeCounter($(this), $_counter);\r\n    updatePrice(true);\r\n})\r\n\r\n/**\r\n * \r\n * @param {Object} selector - Selector from current element \r\n * @param {number} counter - Counter to change the data value\r\n */\r\nfunction changeCounter(selector, counter) {\r\n    selector.parent().find('.counter').attr('data-counter', counter);\r\n    selector.parent().find('.counter').text(counter.toString());\r\n}\r\n\r\n/**\r\n * \r\n * @param {bool} bool - Bool for using operator. false = substraction, true = addition\r\n */\r\nfunction updatePrice(bool) {\r\n    let $currentPrice = $('#offer-element .price').attr('data-current-price');\r\n    let $prevPrice = $('#offer-element #weight-boxes .weight-tab.active').data('price');\r\n    let $newPrice;\r\n\r\n    if($counter > 0) {\r\n        if(bool) {\r\n            $newPrice = parseFloat($currentPrice) + parseFloat($prevPrice);\r\n        } else {\r\n            $newPrice = parseFloat($currentPrice) - parseFloat($prevPrice);\r\n        }\r\n\r\n        $('#offer-element .price').text($newPrice.toFixed(2).toString().replace('.', ',') + \" €\");\r\n        $('#offer-element .price').attr('data-current-price', $newPrice.toFixed(2));\r\n\r\n    } else {\r\n        $('#offer-element .price').text(\"0 €\");\r\n        $('#offer-element .price').attr('data-current-price', 0);\r\n    }\r\n}\n\n//# sourceURL=webpack:///./src/js/counter.js?");
+
+/***/ }),
+
+/***/ "./src/js/megamenu.js":
+/*!****************************!*\
+  !*** ./src/js/megamenu.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n//Logic for Mega Menu\r\n\r\n$('#menu-dropdown .list-item').on('click', function() {\r\n    let $this = $(this);\r\n    let $dataId = $this.data('mega-id');\r\n\r\n    if(!$this.hasClass('active')) {\r\n        \r\n        $('#menu-dropdown .list-item').removeClass('active');\r\n        $('#offer-view .dropdown').removeClass('active');\r\n        $this.addClass('active');\r\n\r\n        $('#offer-view .dropdown[data-mega-id='+ $dataId +']').addClass('active');\r\n\r\n    } else {\r\n        $('#menu-dropdown .list-item').removeClass('active');\r\n        $('#offer-view .dropdown').removeClass('active');\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/js/megamenu.js?");
+
+/***/ }),
+
+/***/ "./src/js/offer.js":
+/*!*************************!*\
+  !*** ./src/js/offer.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n// Logic for offer Element\r\n\r\n$('#weight-boxes .weight-tab').on('click', function() {\r\n    let $this = $(this);\r\n    let $price = $this.data('price');\r\n\r\n    $('#weight-boxes .weight-tab').removeClass('active');\r\n    $this.addClass('active');\r\n\r\n    $('#offer-element .price').text($price.replace('.', ',') + \" €\");\r\n    $('#offer-element .price').attr('data-current-price', $price);\r\n\r\n    $('#offer-element .counter').text('1');\r\n    $('#offer-element .counter').attr('data-counter', '1');\r\n\r\n});\r\n\n\n//# sourceURL=webpack:///./src/js/offer.js?");
 
 /***/ }),
 
@@ -58,7 +98,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"responsiveSlick\": () => (/* binding */ responsiveSlick)\n/* harmony export */ });\n/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\nfunction responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow, dots, arrows) {\r\n    $(selector).slick({\r\n        dots: dots,\r\n        infinite: false,\r\n        arrows : arrows,\r\n        speed: 300,\r\n        slidesToShow: xl_slidetoshow,\r\n        slidesToScroll: 1,\r\n        responsive: [\r\n            {\r\n            breakpoint: 992,\r\n            settings: {\r\n                slidesToShow: lg_slidetoshow,\r\n                slidesToScroll: 3,\r\n                infinite: true,\r\n                dots: true,\r\n                arrow: false\r\n            }\r\n            },\r\n            {\r\n            breakpoint: 768,\r\n            settings: {\r\n                slidesToShow: md_slidetoshow,\r\n                slidesToScroll: 1\r\n            }\r\n            },\r\n            {\r\n            breakpoint: 576,\r\n            settings: {\r\n                slidesToShow: sm_slidetoshow,\r\n                slidesToScroll: 1,\r\n            }\r\n            }\r\n            // You can unslick at a given breakpoint now by adding:\r\n            // settings: \"unslick\"\r\n            // instead of a settings object\r\n        ]\r\n    })\r\n}\r\n\n\n//# sourceURL=webpack:///./src/js/slick.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_0__);\n/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n\r\n\r\nfunction responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetoshow, sm_slidetoshow, dots, arrows) {\r\n    $(selector).slick({\r\n        dots: dots,\r\n        infinite: false,\r\n        arrows : arrows,\r\n        speed: 300,\r\n        slidesToShow: xl_slidetoshow,\r\n        slidesToScroll: 1,\r\n        responsive: [\r\n            {\r\n            breakpoint: 992,\r\n            settings: {\r\n                slidesToShow: lg_slidetoshow,\r\n                slidesToScroll: 3,\r\n                infinite: true,\r\n                dots: true,\r\n                arrow: false\r\n            }\r\n            },\r\n            {\r\n            breakpoint: 768,\r\n            settings: {\r\n                slidesToShow: md_slidetoshow,\r\n                slidesToScroll: 1\r\n            }\r\n            },\r\n            {\r\n            breakpoint: 576,\r\n            settings: {\r\n                slidesToShow: sm_slidetoshow,\r\n                slidesToScroll: 1,\r\n            }\r\n            }\r\n        ]\r\n    })\r\n}\r\n\r\n\r\nresponsiveSlick('#offer-view #image', 1, 1, 1, 1, true, false);\r\nresponsiveSlick('#slider-element #slider', 5, 5, 3, 1, false);\n\n//# sourceURL=webpack:///./src/js/slick.js?");
+
+/***/ }),
+
+/***/ "./src/js/tab_element.js":
+/*!*******************************!*\
+  !*** ./src/js/tab_element.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("/* provided dependency */ var $ = __webpack_require__(/*! ./node_modules/jquery/dist/jquery.js */ \"./node_modules/jquery/dist/jquery.js\");\n//Logic for Tab Element\r\n\r\n$('#tab-element #tabs .tab').on('click', function() {\r\n    let $this = $(this);\r\n    let $tabId = $(this).parent().attr('id');\r\n\r\n    $('#tab-element #tabs .tab').removeClass('active');\r\n    $this.addClass('active');\r\n\r\n    $('#tab-element-detailed .tab-detail').removeClass('active');\r\n    $('#tab-element-detailed .tab-detail[data-tab='+ $tabId +']').addClass('active');\r\n});\n\n//# sourceURL=webpack:///./src/js/tab_element.js?");
 
 /***/ })
 

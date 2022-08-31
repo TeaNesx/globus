@@ -1,0 +1,19 @@
+#flyout {
+    position: fixed;
+    bottom: 21%;
+
+    .flyout-item {
+        background: $dark-grey;
+        padding: 14px;
+        border-radius: 5px;
+        margin-bottom: 3px;
+
+        &:first-child {
+            margin-bottom: 5px;
+        }
+        
+        a {
+            color: white;
+        }
+    }
+}

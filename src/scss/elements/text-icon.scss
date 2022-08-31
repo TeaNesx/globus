@@ -1,36 +1,60 @@
 #text-icon {
-    p, h2 {
-        color: white;
+    @include media-breakpoint-up(lg) {
+        margin-top: 140px !important;
     }
 
-    p {
-        @media(max-width: $screen-sm-min) {
-            margin-top: 20px;
+    .container {
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+            padding-right: 0;
         }
-    }
-
-    .text-view {
-        text-align: center;
-
-        @media(min-width: $screen-lg-min) {
-            margin-bottom: 100px;
+    
+        p, h2 {
+            color: white;
         }
-    }
-
-    .icon {
-        margin-top: 20px;
-
-        i {
-            color: $orange;
-            font-size: 70px;
-            display: flex;
-            justify-content: center;
+    
+        h2 {
+            font-weight: bold;
+    
+            @include media-breakpoint-up(lg) {
+                font-size: 27px;
+                margin-bottom: 25px;
+            }
         }
-
+    
         p {
-            font-size: 20px;
+            @include media-breakpoint-up(lg) {
+                font-size: 19px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 20px;
+            }
+        }
+    
+        .text-view {
             text-align: center;
-            margin-top: 10px;
+    
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 100px;
+            }
+        }
+    
+        .icon {
+            margin-top: 20px;
+    
+            i {
+                color: $orange;
+                font-size: 95px;
+                display: flex;
+                justify-content: center;
+            }
+    
+            p {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 13px;
+            }
         }
     }
 }

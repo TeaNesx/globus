@@ -1,11 +1,22 @@
 #tab-element {
+    @include media-breakpoint-up(lg) {
+        margin-top: 20em !important;
+    }
+
+    
     .tab {
         text-align: center;
         color: white;
-        padding: 15px;
+        padding-top: 47px;
+        padding-bottom: 43px;
+        cursor: pointer;
 
         p {
             margin-bottom: 0;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 30px;
+            }
         }
 
         &.active {
@@ -17,67 +28,100 @@
     #tab-element-detailed {
         background-color: #f3f3f3;
 
-        #tab-detail {
-            color: $dark-grey;
-            padding-bottom: 35px;
-    
-            #tab-detail-title {
-                p {
-                    font-size: 24px;
-                    margin-top: 35px;
-                    font-weight: bold;
-    
-                    @media (max-width: $screen-md-min) {
-                        text-align: center;
-                    }
+        .container {
+            @include media-breakpoint-up(lg) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .tab-detail {
+                display: none;
+                color: $dark-grey;
+                padding-bottom: 48px;
+        
+                &.active {
+                    display: flex;
                 }
     
-            }
-            #chart {
-                margin-bottom: 35px;
-                
-                ul {
-                    margin-bottom: 0;
+                #tab-detail-title {
+                    p {
+                        // font-size: 24px;
+                        font-size: 30px;
+                        margin-top: 57px;
+                        font-weight: bold;
+        
+                        @include media-breakpoint-up(lg) {
+                            margin-bottom: 40px;
+                        }
 
-                    @media (min-width: $screen-lg-min) {
-                        padding-right: 3em;
+                        @include media-breakpoint-down(lg) {
+                            text-align: center;
+                        }
                     }
-
-                    .list-item {
-                        border-bottom: solid 1px $dark-grey;
-                        margin-top: 1rem;
+        
+                }
+                #chart {
+                    margin-bottom: 35px;
+                    
+                    ul {
+                        margin-bottom: 0;
     
-                        .value {
-                            font-weight: bold;
-                            float: right;
+                        @include media-breakpoint-up(lg) {
+                            padding-right: 40px;
+                        }
+    
+                        .list-item {
+                            border-bottom: solid 1px $dark-grey;
+                            margin-top: 1rem;
+
+                            p {
+                                @include media-breakpoint-up(lg) {
+                                    margin-bottom: 11px;
+                                }
+                            }
+        
+                            .value {
+                                font-weight: bold;
+                                float: right;
+                            }
                         }
                     }
                 }
-            }
+        
+                #read-more {
     
-            #read-more {
-
-                @media (min-width: $screen-lg-min) {
-                    display: flex;
-                    align-items: center;
-                }
-
-                .text-view {
-
-                    @media (min-width: $screen-lg-min) {
-                        padding-left: 7em;
-
+                    @include media-breakpoint-down(lg) {
+                        display: flex;
+                        align-items: center;
                     }
-
-                    p {
-                        font-size: 40px;
+                    
+                    @include media-breakpoint-up(lg) {
+                        margin-top: 70px;
                     }
-
-                    @media (max-width: $screen-md-min) {
-                        text-align: center;
+    
+                    .text-view {
+    
+                        @include media-breakpoint-up(lg) {
+                            padding-left: 7em;
+    
+                        }
     
                         p {
-                            font-size: 25px;
+                            font-size: 40px;
+
+                            @include media-breakpoint-up(lg) {
+                                font-size: 61px;
+                                line-height: 1;
+                                margin-bottom: 41px;
+                            }
+                        }
+    
+                        @include media-breakpoint-down(lg) {
+                            text-align: center;
+        
+                            p {
+                                font-size: 25px;
+                            }
                         }
                     }
                 }

@@ -3,26 +3,31 @@
     color: white;
     margin-top: 0 !important;
 
-    @media(min-width: $screen-lg-min) {
-        padding: 100px 0;
+    @include media-breakpoint-up(lg) {
+        padding: 116px 0;
+        padding-bottom: 77px;
     }
 
-    @media(max-width: $screen-md-min) {
+    @include media-breakpoint-down(lg) {
         padding: 60px 0;
     }
 
     #social-title {
         text-align: center;
+
+        h2 {
+            font-weight: bold;
+        }
     }
 
     #social-icon {
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 20px;
 
         .icon {
             text-align: center;
-            margin: 0 10px;
+            margin: 0 20px;
             color: white;
             text-decoration: none;
 
@@ -32,12 +37,12 @@
             }
 
             i {
-                font-size: 35px;
+                font-size: 64px;
             }
         }
 
         .icon-title {
-            margin-top: 5px;
+            margin-top: 15px;
         }
     }
 }

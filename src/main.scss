@@ -12,8 +12,7 @@
 @import "scss/global";
 @import "scss/navigation";
 @import "scss/footer";
-
-@import "scss/mixins/breakpoint-mix";
+@import "scss/flyout";
 
 @import "scss/lib/slick";
 @import "scss/elements/offer";
@@ -21,4 +20,4 @@
 @import "scss/elements/tabs";
 @import "scss/elements/slider";
 @import "scss/elements/banner";
-@import "scss/elements/social"
+@import "scss/elements/social";

@@ -1,25 +1,155 @@
 #offer-view {
+    position: relative;
 
-    @media (max-width: $screen-sm-min) {
+    @include media-breakpoint-down(sm) {
         padding-left: 15px;
         padding-right: 15px;
     }
     
     .container {
+        position: relative;
 
         #menu-dropdown {
+            display: flex;
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 0;
+            }
+            
             ul {
                 display: flex;
+                align-self: flex-end;
+                margin-bottom: 0;
 
                 li {
+                    padding: 10px;
                     color: white;
                     margin-right: 15px;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        margin-right: 5px;
+                        font-size: 23px;
+                    }
 
                     p {
                         margin-bottom: 0;
                         font-size: 20px;
                         cursor: pointer;
+                        font-size: 23px;
+
+                        @include media-breakpoint-down(sm) {
+                            font-size: 19px;
+                        }
                     }
+
+                    &.active {
+                        background: white;
+                        border-radius: 10px;
+                        color: $orange;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            z-index: 9;
+            top: 100px;
+            padding-left: 0;
+            padding-right: 0;
+            box-shadow: 0px 10px 9px -2px rgba(0, 0, 0, 0.57);
+
+            &.active {
+                display: block;
+            }
+
+            @include media-breakpoint-down(lg) {
+                top: 150px;
+            }
+
+            #mega-menu-item {
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 40px;
+
+                ul {
+                    display: block;
+                    
+                    li {
+                        margin-bottom: 15px;
+
+                        a {
+                            color: $dark-grey;
+                            text-decoration: none;
+                            cursor: pointer;
+                            font-size: 17px;
+                            font-weight: bold;
+
+                            i {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+            #mega-menu-text {
+                // background: url("../Assets/images/breakfast.jpg");
+                position: relative;
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $orange;
+                    opacity: .85;
+                }
+
+                .text-view {
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    width: 100%;
+                    max-width: 610px;
+
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        #cart {
+            display: flex;
+            color: white;
+            justify-content: right;
+            margin-left: auto;
+
+            @include media-breakpoint-down(lg) {
+                order: -1 !important;
+            }
+
+            img {
+                max-width: 50px;
+                margin-bottom: 1rem;
+            }
+
+            .text-view {
+                align-self: center;
+                margin-left: 20px;
+
+                span {
+                    color: $green;
                 }
             }
         }
@@ -28,65 +158,92 @@
             background-color: white;
             border-radius: 25px;
             padding: 50px;
+            margin-top: 17px;
+            padding-bottom: 57px;
 
             #image {
-                @media (max-width:$screen-md-min) {
+                @include media-breakpoint-down(lg) {
                     margin-bottom: 60px;
                 }
             }
 
             #detail {
+                @include media-breakpoint-up(lg) {
+                    position: relative;
+                }
     
-                @media(max-width: $screen-sm-min) {
+                @include media-breakpoint-down(sm) {
                     padding-top: 20px;
                 }
 
-                .title-view,
-                .subheader-view {
-                    color: $dark-grey;
-                }
-    
-                .price {
-                    color: $red;
-    
-                    @media(min-width: $screen-lg-min) {
-                        font-size: 45px;
-                    } 
-                    
-                    @media(max-width: $screen-sm-min) {
-                        font-size: 35px;
-                    }
-                }
+                .text-view {
 
-                .tax {
-                    font-style: italic;
+                    @include media-breakpoint-up(lg) {
+                        position: absolute;
+                        right: 15px;
+                        top: 5px;
+                    }
+
+                    .title-view {
+                        font-size: 38px;
+                        font-weight: bold;
+                    }
+
+                    .subheader-view {
+                        font-size: 17px;
+                    }
+
+                    .title-view,
+                    .subheader-view {
+                        color: $dark-grey;
+                    }
+        
+                    .price {
+                        color: $red;
+        
+                        @include media-breakpoint-up(lg) {
+                            font-size: 53px;
+                            font-weight: bold;
+                            margin-top: 52px;
+                            margin-bottom: 0;
+                        } 
+                        
+                        @include media-breakpoint-down(sm) {
+                            font-size: 35px;
+                        }
+                    }
+    
+                    .tax {
+                        font-style: italic;
+                        font-size: 14px;
+                    }
                 }
             }
             
             #weight {
 
-                @media(min-width: $screen-lg-min) {
+                @include media-breakpoint-up(lg) {
                     // align-self: flex-end;
                     // margin-bottom: 50px;
                 }
 
-                @media(max-width: $screen-sm-min) {
+                @include media-breakpoint-down(sm) {
                     margin-top: 40px;
                 }
 
                 #status {
                     display: flex;
                     justify-content: right;
-                    margin-top: 10px;
-                    margin-bottom: 6em;
+                    margin-top: 7px;
+                    margin-bottom: 8rem;
 
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         margin-bottom: 35px;
                     }
 
                     .current-status {
                         margin-left: 10px;
-                        padding: 3px 20px;
+                        padding: 2px 20px;
                         border-radius: 5px;
                         color: white;
 
@@ -107,12 +264,13 @@
                 .title-view {
                     font-size: 20px;
                     font-weight: bold;
+                    margin-bottom: 5px;
 
-                    @media(min-width: $screen-lg-min) {
+                    @include media-breakpoint-up(lg) {
                         text-align: right;
                     }
 
-                    @media(max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         text-align: center;
                     }
                 }
@@ -120,11 +278,11 @@
                 #weight-boxes {
                     display: flex;
 
-                    @media(min-width: $screen-lg-min) {
+                    @include media-breakpoint-up(lg) {
                         justify-content: right;
                     }
 
-                    @media(max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         justify-content: center;
                         margin-bottom: 35px;
                     }
@@ -132,10 +290,18 @@
                     .weight-tab {
                         border: solid 1px $dark-grey;
                         border-radius: 5px;
-                        padding: 10px 25px;
+                        padding: 10px 32px;
                         cursor: pointer;
-                        margin-left: 10px;
+                        margin-left: 12px;
 
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        &.active {
+                            background-color: $light-grey;
+                            color: white;
+                        }
         
                         p {
                             margin-bottom: 0;
@@ -147,8 +313,9 @@
     
             #need-more {
 
-                @media (min-width: $screen-lg-min) {
+                @include media-breakpoint-up(lg) {
                     align-self: flex-end;
+                    margin-top: 35px;
                 }
 
                 #need-more-btn {
@@ -159,7 +326,7 @@
                     border-radius: 5px;
                     margin-left: auto;
 
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         margin: 0 auto;
                         margin-bottom: 35px;
                     }
@@ -186,7 +353,11 @@
     
             #action-btn {
 
-                @media (max-width: $screen-md-min) {
+                @include media-breakpoint-up(lg) {
+                    margin-top: 46px;
+                }
+
+                @include media-breakpoint-down(lg) {
                     display: flex;
                     justify-content: center;
                 }
@@ -196,14 +367,15 @@
                     p {
                         margin-bottom: 0;
                         margin-right: 15px;
+                        align-self: center;
                     }
     
-                    @media (min-width: $screen-lg-min) {
+                    @include media-breakpoint-up(lg) {
                         display: flex;
                         justify-content: right;
                     }
 
-                    @media (max-width: $screen-md-min) {
+                    @include media-breakpoint-down(lg) {
                         display: flex;
                         align-items: center;
                         margin-left: auto;
@@ -211,8 +383,8 @@
                 }
     
                 .btn-action {
-                    padding: 15px;
-                    border-radius: 10px;
+                    padding: 10px;
+                    border-radius: 5px;
                     color: white;
     
                     i {
@@ -221,15 +393,17 @@
                 }
     
                 #add-to-cart {
+                    text-align: right;
+
                     .btn-action {
                         background-color: $green;
                     }
     
-                    @media (min-width: $screen-lg-min) {
-                        margin-top: 10px;
+                    @include media-breakpoint-up(lg) {
+                        margin-top: 12px;
                     }
 
-                    @media (max-width: $screen-sm-min) {
+                    @include media-breakpoint-down(sm) {
                         margin-right: 10px;
                     }
                 }
@@ -239,11 +413,35 @@
                         background-color: $orange;
                     }
     
-                    @media (max-width: $screen-sm-min) {
+                    @include media-breakpoint-down(sm) {
                         margin-left: 10px;
                     }
                 }
             }
+        }
+    }
+
+    #newsletter-button {
+        display: none;
+        color: white;
+        position: absolute;
+        right: 9%;
+        top: 66%;
+        transform: translateY(-50%) rotate(-4deg);
+        max-width: 195px;
+
+        @media (min-width: 2115px) {
+            display: block;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        a {
+            transform: rotate(-7deg);
+            margin-top: 20px;
         }
     }
 }

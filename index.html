@@ -2,6 +2,7 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
+        <title>Globus</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="dist/main.css">
     </head>
@@ -13,7 +14,7 @@
                     <div class="row">
                         <div id="logo" class="col-2">
                             <div class="logo-view">
-                                <img class="img-fluid" src="Assets/images/Globus_logo.jpeg" alt="Globus Logo">
+                                <img class="img-fluid" src="Assets/images/Logo.jpeg" alt="Globus Logo">
                             </div>
                         </div>
                         <div id="burger-menu" class="col-1">
@@ -23,52 +24,27 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div id="items" class="offset-lg-2 col-lg-7 col-12">
+                        <div id="items" class="col-lg-7 col-12">
                             <ul class="list-unstyled">
-                                <li class="list-item">
-                                    <a href="#" class="nav-item">
-                                        Märkte
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="#" class="nav-item">
-                                        Bewusst Leben
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="#" class="nav-item">
-                                        Sortiment
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="#" class="nav-item">
-                                        Services
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="#" class="nav-item">
-                                        Unternehmen
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="#" class="nav-item active">
-                                        Mein Globus
-                                    </a>
-                                </li>
+                                <li class="list-item"><a href="#" class="nav-item">Märkte</a></li>
+                                <li class="list-item"><a href="#" class="nav-item">Bewusst Leben</a></li>
+                                <li class="list-item"><a href="#" class="nav-item">Sortiment</a></li>
+                                <li class="list-item"><a href="#" class="nav-item">Services</a></li>
+                                <li class="list-item"><a href="#" class="nav-item">Unternehmen</a></li>
+                                <li class="list-item active"><a href="#" class="nav-item">Mein Globus</a></li>
                             </ul>
                         </div>
                         <div id="extended-nav" class="col-lg-3 col-12">
                             <div class="row">
                                 <div id="login" class="col-4">
                                     <a href="#">
-                                        <i class="fas fa-user"></i>
-                                        Anmelden
+                                        <i class="fas fa-user"></i>Anmelden
                                     </a>
                                 </div>
-                                <div id="contact" class="col-4">
+                                <div id="contact" class="col-2">
                                     <a href="#">Kontakt</a>
                                 </div>
-                                <div id="newsletter" class="col-4">
+                                <div id="newsletter" class="col-2">
                                     <a href="#">Newsletter</a>
                                 </div>
         
@@ -98,26 +74,30 @@
             <div id="meta-navigation">
                 <div class="container">
                     <div class="row">
-                        <div id="meta-navigation-items" class="offset-lg-2 col-lg-7 col-12">
+                        <div id="meta-navigation-items" class="col-lg-7 col-12">
                             <ul class="list-unstyled">
                                 <li class="meta-item">
                                     <a href="#">
-                                        Startseite ⏵
+                                        Startseite
+                                        <i class="fa-solid fa-caret-right"></i>
                                     </a>
                                 </li>
                                 <li class="meta-item">
                                     <a href="#">
-                                        Märkte ⏵
+                                        Märkte
+                                        <i class="fa-solid fa-caret-right"></i>
                                     </a>
                                 </li>
                                 <li class="meta-item">
                                     <a href="#">
-                                        Dutenhofen ⏵
+                                        Dutenhofen
+                                        <i class="fa-solid fa-caret-right"></i>
                                     </a>
                                 </li>
                                 <li class="meta-item">
                                     <a href="#">
-                                        Obst & Gemüse ⏵
+                                        Obst & Gemüse
+                                        <i class="fa-solid fa-caret-right"></i>
                                     </a>
                                 </li>
                                 <li class="meta-item">
@@ -133,22 +113,87 @@
         </section>
 
         <section id="content">
-            <div id="offer-view">
+            <section id="offer-view">
                 <div class="container">
                     <div class="row">
-                        <div id="menu-dropdown" class="col-12">
+                        <div id="menu-dropdown" class="col-lg-5">
                             <ul class="list-unstyled">
-                                <li class="list-item">
+                                <li class="list-item" data-mega-id="all_product">
+                                    <i class="fa-solid fa-cart-shopping"></i>
                                     <p>
-                                        Alle Produkte ⏷
+                                        Alle Produkte
+                                        <i class="fa-solid fa-caret-down"></i>
                                     </p>
                                 </li>
-                                <li class="list-item">
+                                <li class="list-item" data-mega-id="shopping_list">
+                                    <i class="fa-solid fa-bag-shopping"></i>
                                     <p>
-                                        Einkaufsliste ⏷
+                                        Einkaufsliste
+                                        <i class="fa-solid fa-caret-down"></i>
                                     </p>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="dropdown" data-mega-id="all_product">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="mega-menu-item" class="col-lg-3 col-12 order-last order-lg-first">
+                                        <ul class="list-unstyled">
+                                            <li><a href="#">Autozubehör <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Drogerie <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Essen & Trinken <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Globus - Eigenproduktion <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Haushalt & Wohnen <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Foto, Lesen & Schreiben <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Gastronomie <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Schmuck <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Textilien, Accessoires & Sport <i class="fa-solid fa-chevron-right"></i></a></li>
+                                            <li><a href="#">Spielwaren <i class="fa-solid fa-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="mega-menu-text" class="col-lg-9 col-12 order-first order-lg-last p-0">
+
+                                        <!-- <img class="img-fluid" 
+                                                src="Assets/images/breakfast.jpg"
+                                                srcset="Assets/images/breakfast_mobile.jpeg 780w"
+                                                sizes="(max-width: 576px) 1200px, 100vw"
+                                                alt="breakfast"> -->
+
+                                                <picture>
+                                                    <source media="(max-width: 576px)" srcset="Assets/images/breakfast_mobile.jpeg">
+                                                    <img class="img-fluid" src="Assets/images/breakfast.jpg" alt="breakfast">
+                                                </picture>
+
+
+                                        <div class="overlay"></div>
+                                        <div class="text-view">
+                                            <h2>
+                                                Schon Probiert?
+                                            </h2>
+                                            <p>
+                                                Saftiges Obst, knusprig-warme Brötchen und hochwertiges Fleisch aus der Region - 
+                                                wir sind sicher, dass in unserem Angebot für jeden etwas dabei ist. Wir möchten natürlich,
+                                                dass diese Produkte zu Ihren Wünschen passen. Deshalb helfen Ihnen auf diesen Seiten und
+                                                in unserem SB-Warenhäuser viele Globus Mitarbeiter weiter. Erfahren Sie mehr über
+                                                unsere hohen Ansprüche an Qualität und Frische.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="cart" class="col-lg-3">
+                            <img src="Assets/images/brown-paper-bag.png" alt="brown-paper-bag.png">
+                            
+                            <div class="text-view">
+                                <p>
+                                    24 Artikel<br>
+                                    <span>
+                                        <i class="fa-solid fa-check"></i> gemerkt
+                                    </span>
+                                </p>
+                            </div>
                         </div>
                         
                         <div id="offer-element">
@@ -161,20 +206,21 @@
                                 <div class="col-lg-7">
                                     <div class="row">
                                         <div id="detail" class="col-lg-6 col-12">
-                                            <h1 class="title-view">
-                                                Cherry Tomaten
-                                            </h1>
-                                            <h3 class="subheader-view">
-                                                Globus
-                                            </h3>
-                
-                                            <p class="price">
-                                                2,10 EUR
-                                            </p>
-                                            <p class="tax">
-                                                inkl. MwSt. zzgl Versandkosten</br>
-                                                500g (1kg = 4,20 EUR)
-                                            </p>
+                                            <div class="text-view">
+                                                <h1 class="title-view">
+                                                    Cherry Tomaten
+                                                </h1>
+                                                <h3 class="subheader-view">
+                                                    Globus
+                                                </h3>
+                                                <p class="price" data-current-price="2.10">
+                                                    2,10 €
+                                                </p>
+                                                <p class="tax">
+                                                    inkl. MwSt. zzgl Versandkosten</br>
+                                                    500g (1kg = 4,20 €)
+                                                </p>
+                                            </div>
                                         </div>
                 
                                         <div id="weight" class="col-lg-6 col-12">
@@ -196,17 +242,17 @@
                                             </p>
                 
                                             <div id="weight-boxes">
-                                                <div class="weight-tab" data-weight="500">
+                                                <div class="weight-tab" data-price="3.50">
                                                     <p>
                                                         500 g
                                                     </p>
                                                 </div>
-                                                <div class="weight-tab" data-weight="300">
+                                                <div class="weight-tab" data-price="2.80">
                                                     <p>
                                                         300 g
                                                     </p>
                                                 </div>
-                                                <div class="weight-tab" data-weight="250">
+                                                <div class="weight-tab active" data-price="2.10">
                                                     <p>
                                                         250 g
                                                     </p>
@@ -214,13 +260,13 @@
                                             </div>
                                         </div>
         
-                                        <div id="need-more" class="col-lg-6">
+                                        <div id="need-more" class="col-lg-7">
                                             <div id="need-more-btn">
                                                 <a href="#" class="subtract btn-more">
                                                     -
                                                 </a>
-                                                <p class="counter">
-                                                    0
+                                                <p class="counter" data-counter="1">
+                                                    1
                                                 </p>
                                                 <a href="#" class="add btn-more">
                                                     +
@@ -228,7 +274,7 @@
                                             </div>
                                         </div>
                 
-                                        <div id="action-btn" class="col-lg-6">
+                                        <div id="action-btn" class="col-lg-5">
                                             <div id="compare">
                                                 <p>
                                                     vergleichen
@@ -253,12 +299,23 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <div id="newsletter-button">
+                    <p>
+                        Jetzt Newsletter abbonieren & immer informiert bleiben.
+                    </p>
 
-            <div id="text-icon">
+                    <a href="#" class="btn btn-primary">
+                        Mehr erfahren
+                    </a>
+                </div>
+            </section>
+
+            <section id="text-icon">
                 <div class="container">
                     <div class="row">
                         <div class="text-view col-12">
@@ -302,15 +359,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="tab-element">
+            <section id="tab-element">
                 <div class="container">
                     <div id="tabs" class="row">
                         <div id="nutritional" class="col-4 p-0">
                             <div class="tab active" data-id="1">
                                 <p>
-                                    Nährtwertangabe
+                                    Nährwertangabe
                                 </p>
                             </div>
                         </div>
@@ -333,14 +390,14 @@
 
                 <div id="tab-element-detailed" class="container-fluid">
                     <div class="container">
-                        <div id="tab-detail" class="row">
+                        <div class="tab-detail row active" data-tab="nutritional">
                             <div id="tab-detail-title" class="col-12">
                                 <p>
                                     Angaben beziehen sich auf: 100g Cherry Tomaten
                                 </p>
                             </div>
         
-                            <div id="chart" class="col-lg-6 col-12">
+                            <div id="chart" class="col-lg-5 col-12">
                                 <ul class="list-unstyled">
                                     <li class="list-item">
                                         <p>
@@ -399,11 +456,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-detail row" data-tab="ingredients">
+                            empty ingredients
+                        </div>
+                        <div class="tab-detail row" data-tab="recipe">
+                            empty recipe
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="slider-element">
+            <section id="slider-element">
                 <div class="container">
                     <div class="row">
                         <div id="slider-element-title" class="col-12">
@@ -413,7 +476,7 @@
                         </div>
                         <div id="slider" class="col-12">
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_1.jpg" alt="Cherrytomate_1">
     
                                     <p class="title">
@@ -425,7 +488,7 @@
                                 </div>
                             </div>
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_2.jpg" alt="Cherrytomate_2">
     
                                     <p class="title">
@@ -437,7 +500,7 @@
                                 </div>
                             </div>
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_3.jpeg" alt="Cherrytomate_3">
     
                                     <p class="title">
@@ -450,7 +513,7 @@
                             </div>
 
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_1.jpg" alt="Cherrytomate_1">
     
                                     <p class="title">
@@ -463,7 +526,7 @@
                             </div>
 
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_2.jpg" alt="Cherrytomate_2">
     
                                     <p class="title">
@@ -476,7 +539,7 @@
                             </div>
 
                             <div class="slider-item">
-                                <div class="drop-shadow">
+                                <div class="border">
                                     <img class="img-fluid" src="Assets/images/Cherrytomate_3.jpeg" alt="Cherrytomate_3">
     
                                     <p class="title">
@@ -490,9 +553,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="banner">
+            <section id="banner">
                 <div class="container">
                     <div class="row">
                         <div id="banner-title">
@@ -505,14 +568,45 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div id="socials-element">
+            <section id="flyout">
+                <div id="gas" class="flyout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </a>
+                </div>
+                <div id="food" class="flyout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-utensils"></i>
+                    </a>
+                </div>
+                <div id="location" class="flyout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+                <div id="pen" class="flyout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                </div>
+                <div id="phone" class="flyout-item">
+                    <a href="#">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </section>
+
+        </section>
+
+        <section id="footer">
+            <section id="socials-element">
                 <div class="container">
                     <div class="row">
                         <div id="social-title" class="col-12">
                             <h2>
-                                Bleiben sie Immer informiert
+                                Bleiben Sie Immer informiert
                             </h2>
                         </div>
                         <div id="social-icon">
@@ -543,212 +637,229 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="footer-element">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="footer-item">
+                                        <a href="#" class="footer-title">
+                                            Märkte
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Bewusst Leben
+                                    </a>
+            
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Bewusst Genießen
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Bewusst Pflegen
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Bewusst Wohlfühlen
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Bewusst Handeln
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Rezepte
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Sortiment
+                                    </a>
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Unsere Marken
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Exklusivmarken
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Marken unsere Partner
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Services
+                                    </a>
+            
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Newsletter
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Service vor Ort
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Garantien
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Buchshop
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-6 col-12">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Unternehmen
+                                    </a>
+            
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Profil
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Historie
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Werte
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Arbeiten bei Globus
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Presse
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Standortanforderungen
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Neue
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Ansiedlungsprojekte
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-lg-4 col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Mein Globus
+                                    </a>
+    
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Weinliebhaber Club
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Weltentdecker Club
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Tankeschön
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="col-lg-4 col-md-3 col-12 footer-item">
+                                    <a href="#" class="footer-title">
+                                        Globus Gruppe
+                                    </a>
+            
+                                    <ul class="list-unstyled">
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Globus Baumarkt
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Alphatecc
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Globus Russland
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Globus Tschechien
+                                            </a>
+                                        </li>
+                                        <li class="footer-link">
+                                            <a href="#">
+                                                Mein fridel
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-        <section id="footer">
-            <div class="container">
-                <div id="footer-row-one" class="row">
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Märkte
-                        </a>
-                    </div>
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Bewusst Leben
-                        </a>
+                        <div id="policy" class="col-12">
+                            <a href="#">
+                                Impressum
+                            </a>
 
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Bewusst Genießen
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Bewusst Pflegen
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Bewusst Wohlfühlen
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Bewusst Handeln
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Rezepte
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Sortiment
-                        </a>
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Unsere Marken
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Exklusivmarken
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Marken unsere Partner
-                                </a>
-                            </li>
-                        </ul>
+                            <a href="#">
+                                Datenschutz
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div id="footer-row-two" class="row">
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Services
-                        </a>
-
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Newsletter
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Service vor Ort
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Garantien
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Buchshop
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Unternehmen
-                        </a>
-
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Profil
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Historie
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Werte
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Arbeiten bei Globus
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Presse
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Standortanforderungen
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Neue
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Ansiedlungsprojekte
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Mein Globus
-                        </a>
-
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Weinliebhaber Club
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Weltentdecker Club
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Tankeschön
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div id="footer-row-three">
-                    <div class="col-4 footer-item">
-                        <a href="#" class="footer-title">
-                            Globus Gruppe
-                        </a>
-
-                        <ul class="list-unstyled">
-                            <li class="footer-link">
-                                <a href="#">
-                                    Globus Baumarkt
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Alphatecc
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Globus Russland
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Globus Tschechien
-                                </a>
-                            </li>
-                            <li class="footer-link">
-                                <a href="#">
-                                    Mein fridel
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
     </body>
     <script src="dist/main.js"></script>
