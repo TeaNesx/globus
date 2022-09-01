@@ -24,12 +24,22 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        
 
         .icon {
             text-align: center;
             margin: 0 20px;
             color: white;
             text-decoration: none;
+            
+            @include media-breakpoint-down(sm) {
+                margin: 0 10px;
+
+                &:first-child,
+                &:last-child {
+                    margin: 0;
+                }
+            }
 
             &:hover {
                 color: $dark-grey;
@@ -38,6 +48,10 @@
 
             i {
                 font-size: 64px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 33px;
+                }
             }
         }
 

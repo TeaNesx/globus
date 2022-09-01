@@ -39,4 +39,4 @@ function responsiveSlick(selector, xl_slidetoshow, lg_slidetoshow, md_slidetosho
 
 
 responsiveSlick('#offer-view #image', 1, 1, 1, 1, true, false);
-responsiveSlick('#slider-element #slider', 5, 5, 3, 1, false);
+responsiveSlick('#slider-element #slider', 5, 3, 1, 1, false);

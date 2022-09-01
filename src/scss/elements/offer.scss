@@ -28,9 +28,24 @@
                     display: flex;
                     align-items: center;
 
+                    @include media-breakpoint-down(sm) {
+                        margin-right: 0;
+                    }
+
                     i {
                         margin-right: 5px;
                         font-size: 23px;
+                        margin-left: 10px;
+
+                        @include media-breakpoint-down(sm) {
+                            margin-left: 10px;
+
+                            &:first-child {
+                                display: none;
+                                margin-left: 0;
+                            }
+                        }
+
                     }
 
                     p {
@@ -38,9 +53,11 @@
                         font-size: 20px;
                         cursor: pointer;
                         font-size: 23px;
+                        white-space: nowrap;
 
                         @include media-breakpoint-down(sm) {
-                            font-size: 19px;
+                            font-size: 17px;
+                            font-weight: bold;
                         }
                     }
 
@@ -229,6 +246,8 @@
 
                 @include media-breakpoint-down(sm) {
                     margin-top: 40px;
+                    padding-left: 0;
+                    padding-right: 0;
                 }
 
                 #status {
@@ -293,6 +312,14 @@
                         padding: 10px 32px;
                         cursor: pointer;
                         margin-left: 12px;
+
+                        @include media-breakpoint-between(lg, xxl) {
+                            padding: 10px 14px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            padding: 10px 16px;
+                        }
 
                         &:first-child {
                             margin-left: 0;

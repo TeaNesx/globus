@@ -11,8 +11,13 @@
         padding-bottom: 43px;
         cursor: pointer;
 
+        @include media-breakpoint-down(sm) {
+            padding: 20px 0;
+        }
+
         p {
             margin-bottom: 0;
+            word-break: break-all;
 
             @include media-breakpoint-up(lg) {
                 font-size: 30px;
@@ -92,7 +97,7 @@
     
                     @include media-breakpoint-down(lg) {
                         display: flex;
-                        align-items: center;
+                        justify-content: center;
                     }
                     
                     @include media-breakpoint-up(lg) {
