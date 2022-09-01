@@ -9,10 +9,10 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 //Elements
-@import "scss/global";
-@import "scss/navigation";
-@import "scss/footer";
-@import "scss/flyout";
+@import "scss/page/global";
+@import "scss/page/navigation";
+@import "scss/page/footer";
+@import "scss/page/flyout";
 
 @import "scss/lib/slick";
 @import "scss/elements/offer";
