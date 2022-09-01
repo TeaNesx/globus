@@ -8,5 +8,3 @@ import "./js/counter";
 import "./js/offer";
 import "./js/tab_element";
 import "./js/megamenu";
-
-console.log('ds');
