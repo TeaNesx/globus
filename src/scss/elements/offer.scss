@@ -116,7 +116,6 @@
                 }
             }
             #mega-menu-text {
-                // background: url("../Assets/images/breakfast.jpg");
                 position: relative;
 
                 .overlay {
@@ -238,11 +237,6 @@
             }
             
             #weight {
-
-                @include media-breakpoint-up(lg) {
-                    // align-self: flex-end;
-                    // margin-bottom: 50px;
-                }
 
                 @include media-breakpoint-down(sm) {
                     margin-top: 40px;

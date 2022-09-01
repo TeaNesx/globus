@@ -178,11 +178,6 @@
         
                 #login {
 
-                    @include media-breakpoint-down(lg) {
-                        // margin-left: auto;
-                        // margin-right: 5px;
-                    }
-
                     @include media-breakpoint-up(lg) {
                         display: flex;
                         align-items: center;
@@ -203,7 +198,6 @@
 
                 #contact {
                     @include media-breakpoint-up(lg) {
-                        // margin-left: auto;
                         margin-right: 20px;
                     }
                 }
@@ -250,9 +244,6 @@
         #meta-navigation-items {
             margin-left: 140px;
 
-            // @include media-breakpoint-down(lg) {
-            // }
-            
             @include media-breakpoint-up(xl) {
                 margin-left: 11rem;
             }
